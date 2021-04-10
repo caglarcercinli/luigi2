@@ -1,8 +1,11 @@
 package be.vdab.luigi2.domain;
 
+import org.hibernate.validator.constraints.Range;
+
 public class Adres {
     private final String straat;
     private final String huisNr;
+    @Range(min = 1000, max = 9999)
     private final int postcode;
     private final String gemeente;
 

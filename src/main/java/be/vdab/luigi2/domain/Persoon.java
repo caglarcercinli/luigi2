@@ -1,13 +1,18 @@
 package be.vdab.luigi2.domain;
 
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.Valid;
 import java.time.LocalDate;
 
 public class Persoon {
     private final String voornaam;
     private final String familienaam;
+    @Range(min = 0, max = 69)
     private final int aantalKinderen;
     private final boolean gehuwd;
     private final LocalDate geboorte;
+    @Valid
     private final Adres adres;
 
     public Persoon(String voornaam, String familienaam, int aantalKinderen, boolean gehuwd, LocalDate geboorte, Adres adres) {
