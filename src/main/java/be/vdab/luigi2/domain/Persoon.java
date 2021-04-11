@@ -1,6 +1,7 @@
 package be.vdab.luigi2.domain;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ public class Persoon {
     @Range(min = 0, max = 69)
     private final int aantalKinderen;
     private final boolean gehuwd;
+    @DateTimeFormat(style = "S-")
     private final LocalDate geboorte;
     @Valid
     private final Adres adres;

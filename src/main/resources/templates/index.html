@@ -14,6 +14,7 @@
         <dd th:text="*{gehuwd} ? 'Ja' : 'Nee'"></dd>
         <dt>Adres</dt>
         <dd th:object="${zaakvoerder.adres}" th:text="|*{straat} *{huisNr} *{postcode} *{gemeente}|"></dd>
+        <dt>Geboorte</dt> <dd th:text="*{{geboorte}}"></dd>
     </dl>
 <p>De pagina werd <th:block th:text="${aantalKeerBekeken}"></th:block>
     keer bekeken.</p>
